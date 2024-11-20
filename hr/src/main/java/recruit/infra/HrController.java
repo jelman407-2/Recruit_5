@@ -13,7 +13,7 @@ import recruit.domain.*;
 //<<< Clean Arch / Inbound Adaptor
 
 @RestController
-// @RequestMapping(value="/hrs")
+//@RequestMapping(value="/hrs")
 @Transactional
 public class HrController {
 

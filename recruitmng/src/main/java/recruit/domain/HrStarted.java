@@ -9,6 +9,8 @@ import recruit.infra.AbstractEvent;
 @ToString
 public class HrStarted extends AbstractEvent {
 
+
+    
     private Long id;
     private String email;
     private String jobId;

@@ -9,6 +9,7 @@ import recruit.infra.AbstractEvent;
 @ToString
 public class Failed extends AbstractEvent {
 
+    
     private Long id;
     private String empNo;
     private String name;

@@ -32,7 +32,7 @@ public class PolicyHandler {
     ) {
         RecruitRegistered event = recruitRegistered;
         System.out.println(
-            "\n\n##### listener HrStart : " + recruitRegistered + "\n\n"
+            "\n\n##### listener HrStart : " + recruitRegistered.toString() + "\n\n"
         );
 
         // Sample Logic //

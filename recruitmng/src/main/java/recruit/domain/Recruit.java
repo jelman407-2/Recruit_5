@@ -14,6 +14,7 @@ import recruit.domain.RecruitRegistered;
 //<<< DDD / Aggregate Root
 public class Recruit {
 
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
