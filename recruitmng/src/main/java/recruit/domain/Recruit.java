@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import recruit.RecruitmngApplication;
+import recruit.domain.RecruitCancelled;
 import recruit.domain.RecruitRegistered;
 
 @Entity
@@ -32,6 +33,12 @@ public class Recruit {
     public void onPostPersist() {
         RecruitRegistered recruitRegistered = new RecruitRegistered(this);
         recruitRegistered.publishAfterCommit();
+    }
+
+    @PreRemove
+    public void onPreRemove() {
+        RecruitCancelled recruitCancelled = new RecruitCancelled(this);
+        recruitCancelled.publishAfterCommit();
     }
 
     public static RecruitRepository repository() {

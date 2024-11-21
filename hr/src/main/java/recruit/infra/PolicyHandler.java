@@ -66,5 +66,21 @@ public class PolicyHandler {
         // Sample Logic //
         Hr.hrStateUpdate(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='RecruitCancelled'"
+    )
+    public void wheneverRecruitCancelled_HrStateUpdate(
+        @Payload RecruitCancelled recruitCancelled
+    ) {
+        RecruitCancelled event = recruitCancelled;
+        System.out.println(
+            "\n\n##### listener HrStateUpdate : " + recruitCancelled + "\n\n"
+        );
+
+        // Sample Logic //
+        Hr.hrStateUpdate(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor
