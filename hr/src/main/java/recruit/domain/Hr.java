@@ -118,6 +118,30 @@ public class Hr {
         */
 
     }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void hrStateUpdate(RecruitCancelled recruitCancelled) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Hr hr = new Hr();
+        repository().save(hr);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(recruitCancelled.get???()).ifPresent(hr->{
+            
+            hr // do something
+            repository().save(hr);
+
+
+         });
+        */
+
+    }
     //>>> Clean Arch / Port Method
 
 }

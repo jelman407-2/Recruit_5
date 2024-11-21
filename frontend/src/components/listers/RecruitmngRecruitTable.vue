@@ -91,7 +91,7 @@
             this.newValue = {
                 'email': '',
                 'jobId': '',
-                'regDate': '2024-11-20',
+                'regDate': '2024-11-21',
                 'contents': '',
                 'state': '',
             }
