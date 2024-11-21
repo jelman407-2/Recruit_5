@@ -14,7 +14,6 @@ import recruit.domain.HrStarted;
 //<<< DDD / Aggregate Root
 public class Hr {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -48,9 +47,14 @@ public class Hr {
     public static void hrStart(RecruitRegistered recruitRegistered) {
         //implement business logic here:
 
+        System.out.println(
+            "\n\n##### listener hrStart recruitRegistered : " + recruitRegistered + "\n\n"
+        );
+
         /** Example 1:  new item  */
         Hr hr = new Hr();
 
+        hr.setEmpId(String.valueOf(recruitRegistered.getId()));
         hr.setEmail(recruitRegistered.getEmail());
         hr.setName(recruitRegistered.getName());
         hr.setState(recruitRegistered.getState());
@@ -123,6 +127,19 @@ public class Hr {
     //<<< Clean Arch / Port Method
     public static void hrStateUpdate(RecruitCancelled recruitCancelled) {
         //implement business logic here:
+
+        System.out.println(
+            "\n\n##### listener hrStateUpdate recruitCancelled : " + recruitCancelled + "\n\n"
+        );
+
+        repository().findById(Long.valueOf(recruitCancelled.getId())).ifPresent(hr->{
+            
+            //hr.setStock(hr.getStock() + hr.getQty()); 
+            hr.setState("CANCEL");
+            repository().save(hr);
+
+
+         });
 
         /** Example 1:  new item 
         Hr hr = new Hr();

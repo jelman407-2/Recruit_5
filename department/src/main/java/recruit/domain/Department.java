@@ -51,6 +51,20 @@ public class Department {
     public static void notify(HrStarted hrStarted) {
         //implement business logic here:
 
+        System.out.println(
+            "\n\n##### notify hrStarted : " + hrStarted + "\n\n"
+        );
+
+        /** Example 1:  new item  */
+        Department department = new Department();
+
+        department.setEmpNo(hrStarted.getEmpId());
+        department.setName(hrStarted.getName());
+        department.setDeptId(hrStarted.getJobId());
+        department.setState(hrStarted.getState());
+
+        repository().save(department);
+
         /** Example 1:  new item 
         Department department = new Department();
         repository().save(department);

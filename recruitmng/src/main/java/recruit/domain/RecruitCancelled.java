@@ -18,6 +18,7 @@ public class RecruitCancelled extends AbstractEvent {
     private String contents;
     private String state;
 
+    
     public RecruitCancelled(Recruit aggregate) {
         super(aggregate);
     }

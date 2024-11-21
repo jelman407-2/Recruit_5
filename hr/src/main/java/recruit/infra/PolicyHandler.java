@@ -76,7 +76,7 @@ public class PolicyHandler {
     ) {
         RecruitCancelled event = recruitCancelled;
         System.out.println(
-            "\n\n##### listener HrStateUpdate : " + recruitCancelled + "\n\n"
+            "\n\n##### listener HrStateUpdate recruitCancelled : " + recruitCancelled + "\n\n"
         );
 
         // Sample Logic //
