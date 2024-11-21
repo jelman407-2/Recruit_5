@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: recruitmng
-          image: username/recruitmng:latest
+          image: user02.azurecr.io/recruitmng:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - name: hr
-          image: username/hr:latest
+          image: user02.azurecr.io/hr:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -98,7 +98,7 @@ spec:
     spec:
       containers:
         - name: department
-          image: username/department:latest
+          image: user02.azurecr.io/department:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -138,7 +138,7 @@ spec:
     spec:
       containers:
         - name: mypage
-          image: username/mypage:latest
+          image: user02.azurecr.io/mypage:latest
           ports:
             - containerPort: 8080
           readinessProbe:
