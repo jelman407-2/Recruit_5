@@ -3,9 +3,8 @@ run-name: ${{ github.actor }} is out building GitHub Actions
 
 on:
   push:
-    # Pattern matched against refs/tags
-    tags:        
-      - '**' 
+    branches:
+      - main
 
 jobs:
   docker:
